@@ -7,6 +7,8 @@ user.set({ name: 'New Name' });
 console.log(user.get('name'));
 console.log(user.get('age'));
 
-user.on('change', () => {});
+user.on('change', () => {
+	console.log('On Change Event');
+});
 
-console.log(user);
+user.trigger('change');
